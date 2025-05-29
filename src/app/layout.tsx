@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fira_Code, Inter, Poppins } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 const inter = Inter({
@@ -37,14 +38,29 @@ export default function RootLayout({
         <header className="border-b border-[#30363d] bg-[#161b22]">
           <nav className="github-like-container flex items-center justify-between py-4">
             <div className="flex items-center space-x-6">
-              <a href="/" className="text-xl font-bold text-white font-poppins">Portfolio</a>
-              <a href="#projects" className="nav-link">Projects</a>
-              <a href="#about" className="nav-link">About</a>
-              <a href="#resume" className="nav-link">Resume</a>
-              <a href="#contact" className="nav-link">Contact</a>
+              <Link href="/" className="text-xl font-bold text-white font-poppins">
+                Portfolio
+              </Link>
+              <Link href="#projects" className="nav-link">
+                Projects
+              </Link>
+              <Link href="#about" className="nav-link">
+                About
+              </Link>
+              <Link href="#resume" className="nav-link">
+                Resume
+              </Link>
+              <Link href="#contact" className="nav-link">
+                Contact
+              </Link>
             </div>
             <div className="flex items-center space-x-4">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="nav-link">
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-link"
+              >
                 GitHub
               </a>
             </div>

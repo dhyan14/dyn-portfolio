@@ -39,7 +39,7 @@ export default function Home() {
         "Relevant Coursework: Data Structures, Algorithms, Web Development"
       ],
       achievements: [
-        "Dean's List: All Semesters",
+        "Dean&apos;s List: All Semesters",
         "Senior Project: AI-powered Task Management System",
         "Teaching Assistant: Introduction to Programming"
       ]
