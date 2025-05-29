@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 22, 27, 34;
+  --background-end-rgb: 13, 17, 23;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  min-height: 100vh;
+}
+
+@layer components {
+  .github-like-container {
+    @apply max-w-5xl mx-auto px-4 py-8;
+  }
+
+  .github-like-card {
+    @apply bg-[#0d1117] border border-[#30363d] rounded-lg p-6 mb-6 hover:border-[#8b949e]/50 transition-colors;
+  }
+
+  .github-like-button {
+    @apply px-4 py-2 bg-[#238636] hover:bg-[#2ea043] text-white rounded-md transition-colors inline-flex items-center justify-center;
+  }
+
+  .nav-link {
+    @apply text-[#c9d1d9] hover:text-white transition-colors;
+  }
+
+  .section-title {
+    @apply text-2xl font-bold mb-4 text-white border-b border-[#30363d] pb-2;
+  }
+}
