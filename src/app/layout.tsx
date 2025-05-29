@@ -1,8 +1,25 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Fira_Code, Inter, Poppins } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+});
+
+const firaCode = Fira_Code({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-fira-code",
+});
 
 export const metadata: Metadata = {
   title: "Portfolio | GitHub Theme",
@@ -16,11 +33,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <header className="border-b border-zinc-700 bg-zinc-800">
+      <body className={`${inter.variable} ${poppins.variable} ${firaCode.variable} font-sans`}>
+        <header className="border-b border-[#30363d] bg-[#161b22]">
           <nav className="github-like-container flex items-center justify-between py-4">
             <div className="flex items-center space-x-6">
-              <a href="/" className="text-xl font-bold text-white">Portfolio</a>
+              <a href="/" className="text-xl font-bold text-white font-poppins">Portfolio</a>
               <a href="#projects" className="nav-link">Projects</a>
               <a href="#about" className="nav-link">About</a>
               <a href="#resume" className="nav-link">Resume</a>

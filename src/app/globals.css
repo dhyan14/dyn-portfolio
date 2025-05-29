@@ -21,7 +21,7 @@ body {
 @layer components {
   .github-like-container {
     @apply max-w-5xl mx-auto px-4 py-8;
-  }
+}
 
   .github-like-card {
     @apply bg-[#0d1117] border border-[#30363d] rounded-lg p-6 mb-6 hover:border-[#8b949e]/50 transition-colors;
